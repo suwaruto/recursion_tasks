@@ -3,7 +3,8 @@ import math
 
 def draw_tree(surface, branchLen, x, y, dx, dy, angle):
     if branchLen > 0:
-        pygame.draw.line(surface, (0, 0, 0), (x, y), (x + dx, y - dy), 1 + branchLen // 8)
+        pygame.draw.line(surface, (0, 0, 0), (x, y), (x + dx, y - dy),
+            1 + branchLen // 8)
         x = x + dx
         y = y - dy
         dx = branchLen * math.sin(math.radians(angle))
